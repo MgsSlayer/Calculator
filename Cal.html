@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Cal.css" />
+</head>
+<body>
+<!-- <button onclick="display1()">Display calculator</button> -->
+
+
+    <div class="calculator" id="calculator">
+        <input
+            type="text"
+            class="calculator-screen"
+            id="display"
+            value="0"
+            disabled
+        />
+
+        <div class="calculator-keys">
+            <button type="button" class="all-clear" id="clear" value="all-clear">
+                AC
+            </button>
+            <button type="button" class="delete-key" value="DEL">DEL</button>
+            <button type="button" class="operator" id="percentage" value="%">
+                %
+            </button>
+            <button type="button" class="operator" id="add" value="+">+</button>
+
+            <button type="button" class="convert" id="FD" onclick="convertFahrenheitToCelsius()">F-C</button>
+            <button type="button" class="convert" id="MC" onclick="convertMetersToCentimeters()">M-C</button>
+            <button type="button" class="convert" id="KMM" onclick="convertSqKmToSqMeter()">KM-M</button>
+            <button type="button" class="operator" id="sqroot" onclick="squareroot()">
+                &#8730;
+            </button>
+
+            <button type="button" id="seven" value="7">7</button>
+            <button type="button" id="eight" value="8">8</button>
+            <button type="button" id="nine" value="9">9</button>
+            <button type="button" class="operator" id="subtract" value="-">
+                -
+            </button>
+
+            <button type="button" id="four" value="4">4</button>
+            <button type="button" id="five" value="5">5</button>
+            <button type="button" id="six" value="6">6</button>
+            <button type="button" class="operator" id="multiply" value="*">
+                &times;
+            </button>
+
+            <button type="button" id="three" value="3">3</button>
+            <button type="button" id="two" value="2">2</button>
+            <button type="button" id="one" value="1">1</button>
+            <button type="button" class="operator" id="divide" value="/">
+                &divide;
+            </button>
+
+            
+
+            <button type="button" id="zero" value="0">0</button>
+            <button type="button" class="decimal" id="decimal" value=".">.</button>
+
+            <button type="button" class="equal-sign" id="equals" value="=">
+                =
+            </button>
+        </div>
+        <div id="definitions">
+            <h2>F-C: Fahrenheit to Celcsius</h2>
+            <h2>M-C: Meters to Centimeters</h2>
+            <h2>KM-M: Kilometers to Meters</h2>
+        </div>
+    </div>
+
+    
+
+
+    <script src="Cal.js"></script>
+    <!-- <script>
+    
+        const display = document.getElementById('display');
+        const keys = document.querySelector('.calculator-keys');
+
+        // Handle button clicks
+        keys.addEventListener('click', (event) => {
+            const key = event.target;
+            const keyValue = key.value;
+
+            if (keyValue === 'all-clear') {
+                display.value = '0';
+            } else if (keyValue === 'DEL') {
+                display.value = display.value.slice(0, -1);
+                if (display.value === '') {
+                    display.value = '0';
+                }
+            } else if (keyValue === '=') {
+                try {
+                    display.value = eval(display.value);
+                } catch (error) {
+                    display.value = 'Error';
+                }
+            } else {
+                if (display.value === '0' || display.value === 'Error') {
+                    display.value = keyValue;
+                } else {
+                    display.value += keyValue;
+                }
+            }
+        });
+    </script> -->
+</body>
+</html>
